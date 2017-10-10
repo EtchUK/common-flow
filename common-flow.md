@@ -87,7 +87,7 @@ interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
        you do decide to use merge instead of rebase, you MUST NOT use a mixture
        of both methods, pick one and stick to it.
 4. Pull Requests
-    1. To merge a change branch into its merge target, you MUST open a "pull
+    1. To merge a change branch into its merge target, it is RECOMMENDED you open a "pull
        request" (or equivalent).
     2. The purpose of a pull request is to allow others to review your changes
        and give feedback. You can then fix any issues, complaints, and more that
