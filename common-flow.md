@@ -68,9 +68,9 @@ interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
               Master Branch, subject to not breaking other requirements of this specification.
         * Once a project is Live;
             - all non-Hotfix changes MUST be performed on separate branches that
-            SHOULD be referred to as "change branches".
+              SHOULD be referred to as "change branches".
             - Hotfix changes MAY be performed on the Master Branch, subject to
-            not breaking other requirements.
+              not breaking other requirements of this specification.
     2. All change branches MUST have descriptive names.
     3. It is RECOMMENDED that you commit often locally, and that you try and
        keep the commits reasonably structured to avoid a messy and confusing git
