@@ -33,6 +33,10 @@ Terminology
   effectively just a git tag named after the version of the release.
 - **Release Branches** - Used both for short-term preparations of a release, and
   also for long-term maintenance of older version.
+- **Hotfix** - a single change to a Release that is expected to be incorporated 
+  into a new Release almost immediately.
+- **Live** - A stage-gate that a project passes once it has been deployed/shipped 
+  and serving real users.
 
 Git Common-Flow Specification (Common-Flow)
 -------------------------------------------
@@ -56,8 +60,16 @@ interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
        release/production" state to reduce any friction with creating a new
        release.
 3. Change Branches
-    1. Each change (feature, bugfix, etc.) MUST be performed on separate
-       branches that SHOULD be referred to as "change branches".
+    1a. Before a project is Live;
+       - each change (feature, bugfix, etc.) SHOULD be performed on separate 
+       branches that SHOULD be referred to as "change branches". You MAY
+       perform small (typically single-changeset) changes directly to the 
+       Master Branch, subject to not breaking other requirements.
+    1b. Once a project is Live;
+       - all non-Hotfix changes MUST be performed on separate branches that
+       SHOULD be referred to as "change branches".
+       - Hotfix changes MAY be performed on the Master Branch, subject to
+       not breaking other requirements.
     2. All change branches MUST have descriptive names.
     3. It is RECOMMENDED that you commit often locally, and that you try and
        keep the commits reasonably structured to avoid a messy and confusing git
